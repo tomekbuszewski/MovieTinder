@@ -1,0 +1,7 @@
+@import '../App/globals';
+
+.TextBlock {
+  color: map_get($colors, dark);
+  font-size: map_get($fonts, mid);
+  line-height: 1.5;
+}

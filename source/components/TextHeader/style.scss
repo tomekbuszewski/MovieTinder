@@ -1,0 +1,10 @@
+@import '../App/globals';
+
+.TextHeader {
+  color: map_get($colors, dark);
+  width: 100%;
+  margin-bottom: 20px;
+
+  &--Small { font-size: map_get($fonts, mid); }
+  &--Large { font-size: map_get($fonts, large); }
+}

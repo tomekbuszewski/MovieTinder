@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text Header should match snapshot 1`] = `
+<h4
+  className="TextHeader--Small TextHeader "
+>
+  Some text
+</h4>
+`;

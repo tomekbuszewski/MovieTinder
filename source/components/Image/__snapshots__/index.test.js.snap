@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image tests should match snapshot with all props 1`] = `
+<img
+  alt="Test alt"
+  className=""
+  src="https://some.image"
+  title="Test title"
+/>
+`;
+
+exports[`Image tests should match snapshot without title 1`] = `
+<img
+  alt="Test alt"
+  className=""
+  src="https://some.image"
+  title={false}
+/>
+`;
