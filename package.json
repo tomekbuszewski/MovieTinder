@@ -2,6 +2,7 @@
   "dependencies": {
     "axios": "^0.17.1",
     "bem-classname-builder": "^1.1.0",
+    "prop-types": "^15.6.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1"
   },

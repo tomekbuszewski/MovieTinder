@@ -1,0 +1,38 @@
+@import '../App/globals';
+
+.Rating {
+  display: block;
+  margin: 10px auto;
+  max-width: 80%;
+  max-height: 5rem;
+
+  &__Wrapper {
+    position: relative;
+  }
+
+  &__Text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__Circle {
+    fill: none;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    animation-name: progress;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+
+    &--Red { stroke: map_get($colors, red); }
+    &--Yellow { stroke: map_get($colors, yellow); }
+    &--Green { stroke: map_get($colors, green); }
+  }
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}

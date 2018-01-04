@@ -3,7 +3,7 @@
 .TextHeader {
   color: map_get($colors, dark);
   width: 100%;
-  margin-bottom: 20px;
+  margin: 0;
 
   &--Small { font-size: map_get($fonts, mid); }
   &--Large { font-size: map_get($fonts, large); }

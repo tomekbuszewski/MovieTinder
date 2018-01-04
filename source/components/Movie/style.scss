@@ -2,6 +2,8 @@
 Reused my old code from https://codepen.io/tomekbuszewski/pen/RaQvem
  */
 
+@import '../App/globals';
+
 $initialTransform: 10px;
 $loop: 20;
 
@@ -10,11 +12,12 @@ $Movie: 'Movie';
 .#{$Movie} {
   text-align: center;
   width: 100%;
-  max-width: 320px;
-  height: 260px;
-  background: #f0f0f0;
-  border-radius: 20px;
-  box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.25);
+  max-width: 32rem;
+  height: 75vh;
+  margin-top: 10vh;
+  background: #fafafa;
+  border-radius: 2rem;
+  box-shadow: 0 2rem 3rem 0 rgba(0, 0, 0, 0.15);
   position: absolute;
   top: 0;
   left: 50%;
@@ -22,6 +25,9 @@ $Movie: 'Movie';
   display: flex;
   overflow: hidden;
   pointer-events: none;
+  flex-flow: row wrap;
+  align-items: center;
+  padding: 2rem;
 
   &:last-of-type { pointer-events: all; }
 
@@ -31,6 +37,44 @@ $Movie: 'Movie';
       $scale: (1 - $loop / 100) + ($i / 100);
 
       transform: translateY($transform) translateX(-50%) scale($scale);
+    }
+  }
+
+  &--Accepted:nth-of-type(n) {
+    transform: translate(0, -10rem);
+    opacity: 0;
+  }
+
+  &--Rejected:nth-of-type(n) {
+    transform: translate(25rem, 4rem) rotate(20deg);
+    opacity: 0;
+  }
+
+  &__Buttons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    padding: 2rem;
+  }
+
+  &__Button {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border: 0;
+    border-radius: 3rem;
+
+    &--Accept {
+      background: map_get($colors, green);
+      width: 75%;
+      margin-left: 1rem;
+    }
+
+    &--Decline {
+      background: map_get($colors, red);
+      color: map_get($colors, white);
     }
   }
 }
