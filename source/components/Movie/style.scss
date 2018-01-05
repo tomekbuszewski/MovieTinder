@@ -17,7 +17,7 @@ $Movie: 'Movie';
   margin-top: 10vh;
   background: #fafafa;
   border-radius: 2rem;
-  box-shadow: 0 2rem 3rem 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2rem 3rem 0 rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 0;
   left: 50%;
@@ -32,16 +32,16 @@ $Movie: 'Movie';
   &:last-of-type { pointer-events: all; }
 
   @for $i from $loop through 1 {
-    &:nth-of-type(#{$i}) {
-      $transform: ($loop - $i) * $initialTransform;
-      $scale: (1 - $loop / 100) + ($i / 100);
+    &:nth-last-of-type(#{$i}) {
+      $transform: ($i) * $initialTransform;
+      $scale: 1 - ($i / 100);
 
       transform: translateY($transform) translateX(-50%) scale($scale);
     }
   }
 
   &--Accepted:nth-of-type(n) {
-    transform: translate(0, -10rem);
+    transform: translate(-50%, -10rem);
     opacity: 0;
   }
 

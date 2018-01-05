@@ -53,7 +53,7 @@ export default class Movie extends Component {
     }
 
     this.setState({
-      mainClassName: bem.get({ m })
+      mainClassName: `${bem.get()} ${bem.get({ m })}`
     }, () => {
       setTimeout(() => { this.setState({ visible: false }) }, 500);
     });
@@ -69,7 +69,7 @@ export default class Movie extends Component {
           <Rating number={Number(this.props.rating)} />
         </div>
         <div className={bem.get({ e: 'Buttons' })}>
-          <button className={`${bem.get({ e: 'Button' })} ${bem.get({ e: 'Button', m: 'Decline' })}`}>No</button>
+          <button className={`${bem.get({ e: 'Button' })} ${bem.get({ e: 'Button', m: 'Decline' })}`} onClick={() => this.sendMovie(MOVIE_NO)}>No</button>
           <button className={`${bem.get({ e: 'Button' })} ${bem.get({ e: 'Button', m: 'Accept' })}`} onClick={() => this.sendMovie(MOVIE_YES)}>Yes</button>
         </div>
       </article>
