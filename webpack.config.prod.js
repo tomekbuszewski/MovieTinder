@@ -9,6 +9,10 @@ module.exports = {
   },
   module: {
     rules: [
+      { // SVG
+        test: /\.svg$/,
+        loader: 'babel-loader!svg-react-loader'
+      },
       { // SCSS
         test: /\.scss$|css$/,
         use: [

@@ -1,9 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Muli:200,800|Roboto:300');
 @import '_normalize';
+
+@import '_globals';
 
 * { box-sizing: border-box; }
 
 html {
-  font-size: 10px;
-  font-family: "Source Sans Pro", "Helvetica", sans-serif;
+  font-family: "Roboto", "Helvetica", sans-serif;
+  font-size: 8px;
+}
+
+body {
+  overflow: hidden;
+  height: 100vh;
+  background: $Mirage;
 }

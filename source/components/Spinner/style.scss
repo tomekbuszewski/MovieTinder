@@ -5,6 +5,7 @@ ref https://icons8.com/cssload/en/spinners/4
 @import '../App/globals';
 
 @keyframes spin {
+
   100% { transform: rotate(360deg); }
 }
 
@@ -12,19 +13,19 @@ ref https://icons8.com/cssload/en/spinners/4
   width: 100%;
   height: 49px;
   text-align: center;
-};
+}
 
 .spinner {
   width: 49px;
   height: 49px;
   margin: 0 auto;
-  border-radius: 50%;
-  border-top-color: transparent;
-  border-left-color: transparent;
-  border-right-color: transparent;
-  box-shadow: 3px 3px 1px map_get($colors, brand);
-  animation-name: spin;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-iteration-count: infinite;
+  animation-name: spin;
   animation-timing-function: ease-in;
+  border-left-color: transparent;
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  box-shadow: 3px 3px 1px map_get($colors, brand);
 }
