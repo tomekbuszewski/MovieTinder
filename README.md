@@ -3,6 +3,8 @@
 ## Description
 Simple app built with React that fetches items (movies) from an external API and presents them in a card-styled list. Each item can be selected as „accepted” or „rejected”, yet those choices aren’t stored anywhere (yet, perhaps).
 
+Since this was built as a mobile application in mind, it is best viewed on mobile devices.
+
 ## Code
 Like I said before, I used React with a couple of additional components and services, most notably [*Axios*](https://github.com/axios/axios) for asynchronous data fetching, [*BEM Classname Builder*](https://github.com/tomekbuszewski/ClassNameBuilder) for easier class names constructing when using  BEM and [*React Swipeable*](https://github.com/dogfessional/react-swipeable) for swipe gestures.
 
