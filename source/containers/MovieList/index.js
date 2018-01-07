@@ -21,16 +21,30 @@ class MovieList extends Component {
     }
   }
 
+  /**
+   * Method for fetching data
+   * @returns {promise} - promise with fetched data
+   */
   fetch() {
     return axios.get(API_URL)
       .then(data => this.addMovies(data.data))
       .catch(() => false);
   }
 
+  /**
+   * Method that adds new movies to the collection
+   * @param {array} movies - new collection
+   * @returns {undefined}
+   */
   addMovies(movies) {
-    this.setState({ movies })
+    this.setState({ movies: [ ...this.state.movies, ...movies ] })
   }
 
+  /**
+   * Method for removing a movie the the database
+   * @param {string|number} id - id of the movie
+   * @returns {undefined}
+   */
   removeMovie(id) {
     const movies = this.state.movies.filter(movie => movie.id !== id);
 
