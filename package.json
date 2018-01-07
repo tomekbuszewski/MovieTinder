@@ -4,7 +4,8 @@
     "bem-classname-builder": "^1.1.0",
     "prop-types": "^15.6.0",
     "react": "^16.1.1",
-    "react-dom": "^16.1.1"
+    "react-dom": "^16.1.1",
+    "react-swipeable": "^4.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.24.0",

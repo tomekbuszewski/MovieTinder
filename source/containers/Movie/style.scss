@@ -55,6 +55,11 @@ $Movie: '.Movie';
     transform: translate(25rem, 4rem) rotate(20deg);
   }
 
+  &--RejectedLeft:nth-of-type(n) {
+    opacity: 0;
+    transform: translate(-25rem, 4rem) rotate(-20deg);
+  }
+
   &__Inner {
     position: relative;
     z-index: 2;
