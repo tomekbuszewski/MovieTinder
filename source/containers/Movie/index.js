@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Cn from 'bem-classname-builder';
+import Swipe from 'react-swipeable';
 
 /* Components */
 import TextBlock from '../../components/TextBlock/index';
@@ -24,8 +25,7 @@ export default class Movie extends Component {
     super();
 
     this.state = {
-      mainClassName: bem.get(),
-      visible: true
+      mainClassName: bem.get()
     };
 
     // Bindings
@@ -47,22 +47,24 @@ export default class Movie extends Component {
     }
   }
 
-  sendMovie(type) {
+  sendMovie(type, dir = true) {
     let m;
 
     switch (type) {
       case MOVIE_YES: { m = 'Accepted'; break; }
-      case MOVIE_NO: { m = 'Rejected'; break; }
+      case MOVIE_NO: {
+        if (dir) {
+          m = 'Rejected'; break;
+        } else {
+          m = 'RejectedLeft'; break;
+        }
+      }
     }
 
     this.setState({
       mainClassName: `${bem.get()} ${bem.get({ m })}`
     }, () => {
-      setTimeout(() => {
-        this.setState({ visible: false });
-
-        this.props.onRemove();
-      }, 500);
+      setTimeout(this.props.onRemove, 500);
     });
   }
 
@@ -100,21 +102,19 @@ export default class Movie extends Component {
   }
 
   render() {
-    return this.state.visible
-    ? <article className={this.state.mainClassName}>
-        <Image src={this.getCover(this.props.title)} alt={this.props.title} title={this.props.title} className={bem.get({ e: 'Image' })} />
-        <div className={bem.get({ e: 'Inner' })}>
-          <TextHeader size={LARGE_HEADER} input={this.props.title} additionalClassNames={bem.get({ e: 'Header' })} />
-          <TextBlock input={this.props.description} truncate={150} />
-          <div className={bem.get({ e: 'Rating' })}>
-            <Rating number={Number(this.props.rating)} />
-          </div>
-          <div className={bem.get({ e: 'Buttons' })}>
-            <Button onClick={() => { this.sendMovie(MOVIE_NO)} } type={BUTTON_DECLINE}>Nah</Button>
-            <Button onClick={() => { this.sendMovie(MOVIE_YES)} }>Wanna watch!</Button>
-          </div>
+    return <Swipe nodeName="article" onSwipedLeft={() => { this.sendMovie(MOVIE_NO, false)} } onSwipedRight={() => { this.sendMovie(MOVIE_NO)} } className={this.state.mainClassName}>
+      <Image src={this.getCover(this.props.title)} alt={this.props.title} title={this.props.title} className={bem.get({ e: 'Image' })} />
+      <div className={bem.get({ e: 'Inner' })}>
+        <TextHeader size={LARGE_HEADER} input={this.props.title} additionalClassNames={bem.get({ e: 'Header' })} />
+        <TextBlock input={this.props.description} truncate={150} />
+        <div className={bem.get({ e: 'Rating' })}>
+          <Rating number={Number(this.props.rating)} />
         </div>
-      </article>
-    : null
+        <div className={bem.get({ e: 'Buttons' })}>
+          <Button onClick={() => { this.sendMovie(MOVIE_NO)} } type={BUTTON_DECLINE}>Nah</Button>
+          <Button onClick={() => { this.sendMovie(MOVIE_YES)} }>Wanna watch!</Button>
+        </div>
+      </div>
+    </Swipe>;
   }
 }

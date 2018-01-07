@@ -1,9 +1,9 @@
 import React from 'react';
-import Cn from 'bem-classname-builder';
+import ClassNameBuilder from 'bem-classname-builder';
 
 import style from './style.scss';
 
-const bem = new Cn(style, 'Rating');
+const bem = new ClassNameBuilder(style, 'Rating');
 
 /**
  * Rating svg animated circle. SVG found somewhere on the 'net long
