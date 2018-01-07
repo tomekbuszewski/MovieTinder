@@ -8,6 +8,7 @@ import Movie from '../Movie';
 import EmptyState from '../../components/EmptyState';
 
 import style from './style.scss';
+import { API_URL } from '../../config';
 
 const bem = new ClassNameBuilder(style, 'MovieList');
 
@@ -21,8 +22,13 @@ class MovieList extends Component {
   }
 
   fetch() {
-    axios.get('https://ghibliapi.herokuapp.com/films')
-      .then(data => this.setState({ movies: data.data }));
+    return axios.get(API_URL)
+      .then(data => this.addMovies(data.data))
+      .catch(() => false);
+  }
+
+  addMovies(movies) {
+    this.setState({ movies })
   }
 
   removeMovie(id) {

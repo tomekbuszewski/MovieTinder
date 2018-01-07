@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text Block should match snapshot 1`] = `
+<p
+  className="TextBlock "
+>
+  Some text
+</p>
+`;

@@ -4,14 +4,15 @@ import { NORMAL_TEXT_LIST } from '../../constants/textListTypes';
 
 import style from './style.scss';
 
-import c from '../../services/classNameBuilder';
+import ClassNameBuilder from 'bem-classname-builder';
+const bem = new ClassNameBuilder(style, 'TextList');
 
 // @flow
 const TextList = ({ items, additionalClassNames, type }: { items: Array, additionalClassNames: string, type: string }) => {
-  const mainClassName = type === NORMAL_TEXT_LIST ? style['TextList'] : `${style['TextList']} ${c(style, { b: 'TextList', m: 'Small' })}`;
+  const mainClassName = type === NORMAL_TEXT_LIST ? bem.get() : `${bem.get()} ${bem.get({ m: 'Small' })}`;
 
   return <ul className={`${mainClassName} ${additionalClassNames}`}>
-    {items.map((item, i) => <li key={i} className={c(style, { b: 'TextList', e: 'Item' })} dangerouslySetInnerHTML={{ __html: item }} />)}
+    {items.map((item, i) => <li key={i} className={bem.get({ e: 'Item' })} dangerouslySetInnerHTML={{ __html: item }} />)}
   </ul>;
 };
 

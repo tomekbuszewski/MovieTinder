@@ -2,7 +2,7 @@
 
 exports[`Text List tests default list view should match snapshot 1`] = `
 <ul
-  className="TextList "
+  className=" "
 >
   <li
     className=""
@@ -25,7 +25,7 @@ exports[`Text List tests default list view should match snapshot 1`] = `
 
 exports[`Text List tests small list view should match snapshot 1`] = `
 <ul
-  className="TextList  "
+  className="  "
 >
   <li
     className=""
