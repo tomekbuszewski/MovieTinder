@@ -48,6 +48,13 @@ export default class Movie extends Component {
     }
   }
 
+  /**
+   * Method that sets the class name for movie and dispatches a callback
+   * from parent component.
+   * @param {string} type - type of answer
+   * @param {boolean} dir - if true, will be animated to right (default)
+   * @returns {undefined}
+   */
   sendMovie(type, dir = true) {
     let m;
 
