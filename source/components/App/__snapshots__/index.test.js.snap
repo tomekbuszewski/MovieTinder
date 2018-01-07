@@ -2,8 +2,13 @@
 
 exports[`App test should match snapshot 1`] = `
 <div
-  className="main"
+  className=""
 >
-  Hello
+  <div />
+  <p
+    className="TextBlock "
+  >
+    There are no movies
+  </p>
 </div>
 `;

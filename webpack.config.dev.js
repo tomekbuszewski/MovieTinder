@@ -15,11 +15,16 @@ module.exports = {
   },
   module: {
     rules: [
+      { // SVG
+        test: /\.svg$/,
+        loader: 'babel-loader!svg-react-loader'
+      },
       { // SCSS
         test: /\.scss|.css$/,
+        exclude: /(node_modules)/,
         use: [
           { loader: 'style-loader' },
-          { loader: 'css-loader', options: { importLoader: 1, modules: true, localIdentName: '[path]___[name]__[local]___[hash:base64:5]' } },
+          { loader: 'css-loader', options: { importLoader: 1, modules: true, localIdentName: '[name]__[local]___[hash:base64:5]' } },
           { loader: 'sass-loader', options: { sourceMap: true } }
         ]
       },

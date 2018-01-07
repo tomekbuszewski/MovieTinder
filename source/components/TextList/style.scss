@@ -1,0 +1,17 @@
+@import '../App/globals';
+
+$Element: '.TextList';
+
+#{$Element} {
+  color: map_get($colors, dark);
+  font-size: map_get($fonts, mid);
+
+  &--Small {
+    display: flex;
+    list-style: none;
+
+    #{$Element}__Item {
+      margin-right: 20px;
+    }
+  }
+}

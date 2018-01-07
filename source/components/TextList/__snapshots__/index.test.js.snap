@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text List tests default list view should match snapshot 1`] = `
+<ul
+  className=" "
+>
+  <li
+    className=""
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "one",
+      }
+    }
+  />
+  <li
+    className=""
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "two",
+      }
+    }
+  />
+</ul>
+`;
+
+exports[`Text List tests small list view should match snapshot 1`] = `
+<ul
+  className="  "
+>
+  <li
+    className=""
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "one",
+      }
+    }
+  />
+  <li
+    className=""
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "two",
+      }
+    }
+  />
+</ul>
+`;

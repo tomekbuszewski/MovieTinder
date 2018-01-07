@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:200,800|Roboto:300');
+@import '_normalize';
+
+@import '_globals';
+
+* { box-sizing: border-box; }
+
+html {
+  font-family: "Roboto", "Helvetica", sans-serif;
+  font-size: 8px;
+}
+
+body {
+  overflow: hidden;
+  height: 100vh;
+  background: $Mirage;
+}

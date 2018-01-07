@@ -1,0 +1,14 @@
+@import '../App/globals';
+
+.EmptyState {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: $PotPourri;
+  text-align: center;
+  transform: translate(-50%, -50%);
+
+  &__Text {
+    margin-top: 3rem;
+  }
+}

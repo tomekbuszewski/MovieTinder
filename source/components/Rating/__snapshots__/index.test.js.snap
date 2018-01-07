@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rating tests should match snapshot 1`] = `
+<div
+  className=""
+>
+  <span
+    className=""
+  >
+    90
+    %
+  </span>
+  <svg
+    className=""
+    viewBox="0 0 36 36"
+  >
+    <path
+      className=" "
+      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+      strokeDasharray="90, 100"
+    />
+  </svg>
+</div>
+`;
