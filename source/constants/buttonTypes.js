@@ -1,0 +1,2 @@
+export const BUTTON_ACCEPT = 'BUTTON_ACCEPT';
+export const BUTTON_DECLINE = 'BUTTON_DECLINE';

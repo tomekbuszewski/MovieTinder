@@ -1,0 +1,21 @@
+.header {
+  padding: 20px 10px;
+
+  @media (min-width: 768px) {
+    padding: 40px 20px;
+  }
+
+  @media (min-width: 1280px) {
+    padding: 80px 20px;
+  }
+}
+
+.logo {
+  color: #737373;
+  font-size: 36px;
+  text-transform: uppercase;
+
+  span {
+    color: #fdc22a;
+  }
+}

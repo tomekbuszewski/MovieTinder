@@ -1,0 +1,14 @@
+@import '../../components/App/globals';
+
+.MovieList {
+  position: relative;
+  width: calc(100vw - 6rem);
+  max-width: 90rem;
+  height: calc(100vh - 6rem);
+  margin: 3rem auto 0;
+
+  @media (min-width: map_get($mq, md)) {
+    height: 70rem;
+    margin-top: 5rem;
+  }
+}

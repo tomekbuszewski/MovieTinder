@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "axios": "^0.17.1",
+    "bem-classname-builder": "^1.1.0",
+    "prop-types": "^15.6.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1"
   },
@@ -32,8 +34,11 @@
     "resolve-url-loader": "^2.0.2",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.14.1",
-    "stylelint": "^7.10.1",
-    "stylelint-scss": "^1.4.3",
+    "stylelint": "^8.4.0",
+    "stylelint-config-idiomatic-order": "^5.0.0",
+    "stylelint-config-recommended-scss": "^3.0.0",
+    "stylelint-scss": "latest",
+    "svg-react-loader": "^0.4.5",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.4"
   },

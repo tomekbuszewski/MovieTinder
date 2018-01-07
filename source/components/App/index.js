@@ -1,10 +1,8 @@
 import React from 'react';
-import './normalize.scss';
+import './style.scss';
 
 import Movies from '../../containers/MovieList';
 
-const App = () => <div>
-  <Movies />
-</div>;
+const App = () => <Movies />;
 
 export default App;

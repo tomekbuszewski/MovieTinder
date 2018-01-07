@@ -1,0 +1,28 @@
+@import 'colors';
+
+$colors: (
+  brand: #2274a5,
+  beige: #f6e8ea,
+  green: #63ed96,
+  red: #dc2803,
+  yellow: #e0ac43,
+  black: #333232,
+  violet: #372549,
+  bg: #1c1f33
+);
+
+$mq: (
+  xs: 0,
+  sm: 550px,
+  md: 768px,
+  lg: 1280px
+);
+
+$fonts: (
+  title: 3rem,
+  text: 1.75rem,
+  small: 1.25rem
+);
+
+$fontPrimary: "Roboto", sans-serif;
+$fontSecondary: "Muli", sans-serif;

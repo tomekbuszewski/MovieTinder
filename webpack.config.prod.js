@@ -1,7 +1,7 @@
 var path = require('path');
 
 module.exports = {
-  devtool: 'source-map',
+  devtool: 'none',
   entry: './source/index.js',
   output: {
     filename: 'index.js',
@@ -9,10 +9,15 @@ module.exports = {
   },
   module: {
     rules: [
+      { // SVG
+        test: /\.svg$/,
+        loader: 'babel-loader!svg-react-loader'
+      },
       { // SCSS
         test: /\.scss$|css$/,
         use: [
-          { loader: 'css-loader', options: { importLoader: 1, modules: true, localIdentName: '[path]___[name]__[local]___[hash:base64:5]' } },
+          { loader: 'style-loader' },
+          { loader: 'css-loader', options: { importLoader: 1, modules: true, localIdentName: '[name]__[local]___[hash:base64:5]' } },
           { loader: 'sass-loader', options: { sourceMap: false } }
         ]
       },

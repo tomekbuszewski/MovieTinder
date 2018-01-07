@@ -1,0 +1,40 @@
+@import '../App/globals';
+
+.Rating {
+  display: block;
+  width: 6rem;
+  height: 6rem;
+  margin: auto;
+
+  &__Wrapper {
+    position: relative;
+    margin: auto;
+  }
+  &__Text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: $PotPourri;
+    font-size: 1.5rem;
+    transform: translate(-50%, -50%);
+  }
+  &__Circle {
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-name: progress;
+    fill: none;
+    stroke-linecap: round;
+    stroke-width: 2.8;
+
+    &--Red { stroke: $Grenadier; }
+    &--Yellow { stroke: $Anzac; }
+    &--Green { stroke: $PastelGreen; }
+  }
+}
+
+@keyframes progress {
+
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
